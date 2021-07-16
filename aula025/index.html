@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula25</title>
+</head>
+<body>
+
+    <h2>Godoy</h2>
+    <p>Programador</p>
+    <h2>Aula 25</h2>
+    <p>JavaScript</p>
+    <h2>DOM</h2>
+    
+
+    <hr>
+
+    <script>
+
+        /*
+        //Para pegar grupo de tags específicas informo a tag
+        var tagsP = document.getElementsByTagName('p');
+
+        for(var i=0; i<tagsP.length; i++) {
+
+            tagsP[i].style.color='#f00';
+        }
+        */
+
+        //Para pegar todas as tags do documento coloco asterísco
+        var tags = document.getElementsByTagName('*');
+
+            tags[9].innerHTML='Novo Texto';
+            tags[9].style.color='#f00';
+        
+
+    </script>
+    
+</body>
+</html>
