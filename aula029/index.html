@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula028</title>
+
+    <script>
+
+        var valor = 10.3;
+        //ceil arredonda para cima
+        var mt = Math.ceil(valor);
+
+        document.write('ceil arredonda para cima -> valor = 10.3, tem o retorno '+mt+'<br><br>');
+
+
+
+        var valor = 20.8;
+        //floor arredonda para baixo
+        var mt = Math.floor(valor);
+
+        document.write('floor arredonda para baixo -> valor = 20.8, tem o retorno '+mt+'<br><br>');
+
+
+        var valor = 30.4;
+        //round arredondamento para o mais próximo
+        var mt = Math.round(valor);
+
+        document.write('round arredondamento para o mais próximo -> valor = 30.4, tem o retorno '+mt+'<br><br>');
+
+
+        var valor = 5;
+        //pow eleva o número da variável ao número definido no método
+        var mt = Math.pow(valor, 3);
+
+        document.write('pow eleva o número da variável ao número definido no método -> valor 5, tem o retorno '+mt+'<br><br>');
+
+
+        //random retorna um valor aleatório entre 0 e 1
+        var mt = Math.random();
+
+        document.write('random retorna um valor aleatório entre 0 e 1, o retorno disso é: '+mt+'<br><br>');
+
+
+        var valor = 10;
+        //random retorna um valor aleatório entre 0 e 1
+        var mt = Math.round(Math.random()*valor);
+
+        document.write('random pode retornar um valor aleatório entre um número definido, o retorno disso é: '+mt+'<br><br>');
+
+
+        var valor = 59;
+        //surpresinha da mega
+        for(i=0; i<6; i++) {
+            document.write(Math.round((Math.random()*valor)+1)+'<br>')
+        }
+
+
+        var valor = Math.max(1,2,3,4,5,6,7,8);
+
+        document.write('<br>O maior valor retornado é: '+valor+'<br><br>');
+
+
+        var valor = Math.min(1,2,3,4,5,6,7,8);
+
+        document.write('<br>O menor valor retornado é: '+valor);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
