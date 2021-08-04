@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula030</title>
+
+    <script>
+        
+        //função simples
+        function escreve() {
+            document.write('Godoy<br>');
+        }
+        escreve();
+        
+
+
+        
+        //função com passagem de parâmetros
+        function soma(n1, n2) {
+            var res = n1 + n2;
+            document.write(res+'<br>');
+        }
+
+        soma(5, 2);
+        soma(10, 20);
+        soma(0, 1);
+        
+
+        
+        //função com retorno
+        function somar(n1, n2) {
+            return n1+n2;
+        }
+
+        var res = somar(33,7);
+
+        document.write(somar(43, 7)+'<br>');
+        
+
+
+        
+        var numeros = new Array(10,22,93);
+
+        function media(nums) {
+            var tam = numeros.length;
+            var soma = 0;
+            for(i=0; i<tam; i++) {
+                soma+=nums[i];
+            }
+            return Math.round(soma/tam);
+        }
+
+        document.write(media(numeros));
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
