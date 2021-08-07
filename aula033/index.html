@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula033</title>
+
+    <style>
+        #dv1 {
+            background-color: #f00;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+
+    <script>
+
+        /*
+        function msg() {
+            alert('Godoy');
+        }
+
+        function cor1() {
+            var obj = document.getElementById('dv1');
+            obj.style.backgroundColor='#fff'
+        }
+
+        function cor2() {
+            var obj = document.getElementById('dv1');
+            obj.style.backgroundColor = '#f00';
+        }
+
+
+        function addEventos() {
+            var obj = document.getElementById('dv1');
+            obj.addEventListener('click', msg)
+            obj.addEventListener('mouseover', cor1);
+            obj.addEventListener('mouseout', cor2);
+        }
+
+        window.addEventListener('load',addEventos);
+        */
+
+        function msg() {
+            alert('Godoy');
+        }
+
+        function cor(obj, cor) {
+            obj.style.backgroundColor=cor;
+        }
+
+        //podemos usar função anonima....eu usei arrow function
+        function addEventos() {
+            var obj = document.getElementById('dv1');
+            obj.addEventListener('click', msg)
+            obj.addEventListener('mouseover', () => {
+                cor(obj, '#fff');
+            });
+            obj.addEventListener('mouseout', () => {
+                cor(obj, '#f00');
+            });
+        }
+
+        window.addEventListener('load',addEventos);
+    </script>
+</head>
+<body>
+    
+    <div id="dv1"></div>
+</body>
+</html>
