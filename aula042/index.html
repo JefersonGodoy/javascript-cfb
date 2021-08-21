@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula042</title>
+    <style>
+        table, td, th, tr {
+            border: 1px solid #000;
+            border-collapse: collapse;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <table id="tbnotas">
+        <thead>
+            <tr>
+                <th>Alunos</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Al 1</td>
+                <td>35</td>
+                <td>48</td>
+                <td id="n1"></td>
+            </tr>
+            <tr>
+                <td>Al 2</td>
+                <td>20</td>
+                <td>15</td>
+                <td id="n2"></td>
+            </tr>
+            <tr>
+                <td>Al 3</td>
+                <td>48</td>
+                <td>48</td>
+                <td id="n3"></td>
+            </tr>
+            <tr>
+                <td>Al 4</td>
+                <td>20.5</td>
+                <td>50</td>
+                <td id="n4"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+
+        var tabela = document.getElementById('tbnotas');
+        var nota;
+
+        for(var i=1;i<tabela.rows.length;i++) {
+            nota=Number(tabela.rows[i].cells[1].innerHTML) + Number(tabela.rows[i].cells[2].innerHTML);
+            tabela.rows[i].cells[3].innerHTML = nota;
+        }
+
+        var n=[];
+        n[0] = document.getElementById('n1');
+        n[1] = document.getElementById('n2');
+        n[2] = document.getElementById('n3');
+        n[3] = document.getElementById('n4');
+
+        for(var i=0;i<4;i++) {
+            if(n[i].innerHTML < 70) {
+                n[i].style.color="#f00";
+            }else {
+                n[i].style.color="#00f";
+            }
+        }
+
+    </script>
+</body>
+</html>
