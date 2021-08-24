@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula046</title>
+</head>
+<body>
+    
+    <p id="txt">CFB Cursos - Curso de Javascript - aula 46 do curso de javascript</p>
+
+    <script>
+        
+        var texto = document.getElementById('txt').innerHTML;
+
+        //retorno normal case-sensitive
+        //var res = texto.match("aula");
+
+        //o modificador g mostra todas as palavras encontradas case-sensitive
+        //var res = texto.match(/de/g);
+
+        //o modificador i faz com o case-sensitive seja desativado
+        //var res = texto.match(/Javascript/ig);
+
+        //mostra o total de letras dentro do array [oa]
+        //var res = texto.match(/[oa]/ig);
+
+        //o sinal ^ sgnifica que mostra todas as osorrências menos as letras [oa]
+        //var res = texto.match(/[^oa]/ig);
+
+        //retorna todos as letras da letra a até a letra g
+        //var res = texto.match(/[a-g]/ig); 
+
+        //retorna todos as letras depois das letras a até a letra g
+        //var res = texto.match(/[^a-g]/ig); 
+
+        //a barra invertida com d minúsculo mostra todos os números
+        //var res = texto.match(/\d/ig); 
+
+        //a barra invertida com D maiúsculo mostra todos os não números
+        //var res = texto.match(/\D/ig); 
+
+        //pesquisa somente por letras e números, ignorando espaços, traços, etc
+        var res = texto.match(/\w/ig); 
+        
+        //o length retorna o número de letras
+        document.write(res + " : " + res.length + "<br>");
+
+        //mostrando o resultado no array
+        document.write(res[1]);
+
+    </script>
+
+</body>
+</html>
