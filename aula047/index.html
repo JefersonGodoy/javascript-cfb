@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula046</title>
+</head>
+<body>
+    
+    <p id="txt">CFB Cursos - Curso de Javascript</p>
+
+    <script>
+        
+        var texto = document.getElementById('txt').innerHTML;
+
+        var txt2 = " - aula 46 do curso de javascript";
+
+        //retorna a posição em que o texto se inicia, no caso de aula é 35
+        //var res = texto.search(/aula/i); 
+
+        //o método replace substitui a palavra definica (/curso/i) pela palavra "aula"----- se usar o modificador g troca todas as palavras encontradas.
+        //var res = texto.replace(/curso/ig, "aula"); 
+
+        //retorna o caracter que está na posição informada dentro do parenteses.
+        //var res = texto.charAt(11); 
+
+        //retorna o código do caracter
+        //var res = texto.charCodeAt(2); 
+
+        //informo o código e ele retorna o caracter
+        //var res = texto.charCodeAt(0); 
+        //document.write(res + "<br>");
+        //document.write(String.fromCharCode(67));
+        
+
+        //junta strings
+        var res = texto.concat(txt2);
+        document.write(res);
+
+    </script>
+
+</body>
+</html>
