@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula048</title>
+</head>
+<body>
+    
+    <p id="txt">CFB Cursos - Curso de Javascript</p>
+
+    <script>
+        /*
+        //o indexOf é case-sensitive, e mostra a posição do primeiro caracter encontrado.
+        var texto1 = document.getElementById('txt').innerHTML;
+        var res = texto1.indexOf('C');
+        if(res < 0) {
+            document.write("Letra não encontrada");
+        }else {
+            document.write(res);
+        }
+        */
+
+        /*
+        //o lastIndexOf é case-sensitive, e mostra a posição do último caracter encontrado.
+        var texto1 = document.getElementById('txt').innerHTML;
+        var res = texto1.lastIndexOf('C');
+        if(res < 0) {
+            document.write("Letra não encontrada");
+        }else {
+            document.write(res);
+        }
+        */
+
+        /*
+        //o localeCompare compara se as strings são iguais ou diferentes
+        var texto1 = document.getElementById('txt').innerHTML;
+        var texto2 = "CFB Cursos -Curso de Javascript";
+        var res = texto1.localeCompare(texto2);
+        //se 0 é iguais
+        //se ! é diferentes
+        if(res == 0) {
+            document.write("Iguais");
+        }else {
+            document.write('Diferentes');
+        }
+        */
+
+        /*
+        //ele faz um corte na string e retorna a palavra solicitada
+        var texto = document.getElementById('txt').innerHTML;
+        //o primeiro parametro é onde começa e o segundo onde termina
+        var res = texto.slice(22,32);
+            document.write(res);
+        */
+
+        /*
+        //ele é semelhante ao slice, só que informo aonde começa e quantos caracteres quero apresentar
+        var texto = document.getElementById('txt').innerHTML;
+        //o primeiro parametro é onde começa e o segundo quantos caracteres
+        var res = texto.substr(22,4);
+            document.write(res);
+        */
+
+        
+        //toLocaleLowerCase converte toda a string para letras minúsculas.
+        //toLocaleUpperCase converte toda a string para letras maiúsculas.
+        var texto = document.getElementById('txt').innerHTML;
+        var res = texto.toLocaleLowerCase();
+        var res2 = texto.toLocaleUpperCase();
+            document.write(res+"<br>"+ res2);
+
+    </script>
+</body>
+</html>
