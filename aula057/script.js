@@ -13,7 +13,8 @@ var posCpuX, posCpuY;
 var dirJy;
 
 //Posições iniciais
-var posJogIniY = 180, posCpuIniY = 180;
+var posJogIniY = 180, posJogIniX = 0;
+var posCpuIniY = 180, posCpuIniX = 930;
 var posBolaIniX = 475, posBolaIniY = 240;
 
 //Tamanhos
@@ -32,7 +33,7 @@ var pontos = 0;
 var tecla;
 var jogo = false;
 
-function controlaJogo() {
+function controlaJog() {
     if (jogo) {
         posJogadorY += velJogador * dirJy;
         if (
@@ -69,6 +70,37 @@ function controlaBola() {
         bolaX *= -1;
     }
 
+    //Limite superior e inferior
+
+    if ((posBolaY >= 480) || (posBolaY <= 0)) {
+        bolaY *= -1;
+    }
+
+    //Saiu da tela, pela direita e pela esquerda
+    if (posBolaX >= (campoW - bolaW)) {
+        velBola = 0;
+        posBolaX = posBolaIniX;
+        posBolaY = posBolaIniY;
+        posJogadorY = posJogIniY;
+        posCpuY = posCpuIniY;
+        pontos++
+        vPaineltxtpontos.value = pontos;
+        jogo = false;
+        vJogador.style.top = posJogadorY + "px";
+        vCpu.style.top = posCpuY + "px";
+    } else if (posBolaX <= 0) {
+        velBola = 0;
+        posBolaX = posBolaIniX;
+        posBolaY = posBolaIniY;
+        posJogadorY = posJogIniY;
+        posCpuY = posCpuIniY;
+        pontos--;
+        vPaineltxtpontos.value = pontos;
+        jogo = false;
+        vJogador.style.top = posJogadorY + "px";
+        vCpu.style.top = posCpuY + "px";
+    }
+
     vBola.style.top = posBolaY + "px";
     vBola.style.left = posBolaX + "px";
 }
@@ -93,7 +125,7 @@ function teclaUp(event) {
 
 function game() {
     if (jogo) {
-        controlaJogo();
+        controlaJog();
         controlaBola();
     }
 
@@ -102,6 +134,7 @@ function game() {
 
 function iniciaJogo() {
     if (!jogo) {
+        velBola = velCpu = velJogador = 8;
         cancelAnimationFrame(frames);
         jogo = true;
         dirJy = 0;
@@ -114,7 +147,9 @@ function iniciaJogo() {
         posBolaX = posBolaIniX;
         posBolaY = posBolaIniY;
         posJogadorY = posJogIniY;
+        posJogadorX = posJogIniX;
         posCpuY = posCpuIniY;
+        posCpuX = posCpuIniX;
         game();
     }
 
