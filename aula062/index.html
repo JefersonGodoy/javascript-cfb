@@ -7,11 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        var minhaJanela = window.open("tmp.html");
+
+        var minhaJanela1, minhaJanela2;
+
+        function abreJ() {
+
+            minhaJanela1 = window.open("tmp.html", "_blank", "width=300, height=300, top=300, left=300");
+            minhaJanela2 = window.open("tmp.html", "_blank", "width=300, height=300, top=300, left=300");
+        }
+
+        function fechaJ() {
+
+            minhaJanela1.close();
+            minhaJanela2.close();
+        }
+
     </script>
 </head>
 
 <body>
+
+    <button onclick="abreJ()">Abre Noa Janela</button>
+    <button onclick="fechaJ()">Fechar Janela</button>
+
+    <iframe name="god" src=""></iframe>
 
 </body>
 
