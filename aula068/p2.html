@@ -16,7 +16,50 @@
     var v2 = dados[2];
     document.write(v2);
 
+    document.write("<br>");
+
+    var h = location.hostname;
+    document.write(h);
+
     document.write("<hr>");
+
+    var url = location.href;
+    document.write(url);
+
+    /*
+    var url1 = location.href = "https://github.com/jefersongodoy";
+    document.write(url1);
+    */
+
+    document.write("<hr>");
+
+    var o = location.origin;//protocolo, hostname, porta
+    document.write(o);
+
+    document.write("<hr>");
+
+    var p = location.pathname;//caminho depois do hostname
+    document.write(p);
+
+    document.write("<hr>");
+
+    var porta = location.port;
+    document.write(porta);
+
+    document.write("<hr>");
+
+    var proto = location.protocol;
+    document.write(proto);
+
+    document.write("<hr>");
+
+    var aux1 = location.search;
+    dados1 = aux1.split("?");
+    a1 = dados1[1].split("=")[1];
+    document.write(a1);
+
+    document.write("<hr>");
+
 </script>
 
 <style>
