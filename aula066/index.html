@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #painel {
+        width: 400px;
+        height: 400px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>
+
+<script>
+    var painel;
+
+    function inicia() {
+        painel = document.getElementById("painel");
+        painel.innerHTML += "L: " + screen.width + "px<hr>"
+        painel.innerHTML += "A: " + screen.height + "px<hr>"
+        painel.innerHTML += "L dis: " + screen.availWidth + "px<hr>"
+        painel.innerHTML += "A dis: " + screen.availHeight + "px<hr>"
+        painel.innerHTML += "Profundidade de cores (imagens): " + screen.colorDepth + "bits<hr>"
+        painel.innerHTML += "Resolução cor da tela (pixel): " + screen.pixelDepth + "bits/px<hr>"
+    }
+
+    window.addEventListener("load", inicia);
+
+</script>
+
+<body>
+
+    <div id="painel"></div>
+</body>
+
+</html>
