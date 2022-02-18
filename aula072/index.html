@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <script>
 
         function pagina(pg) {
+            sessionStorage.nome = document.getElementById("fnome").value;
             window.location.assign("p" + pg + ".html");
         }
 
@@ -17,6 +17,8 @@
             document.getElementById("btnP2").addEventListener("click", () => pagina(2));
 
             document.getElementById("btnP3").addEventListener("click", () => pagina(3));
+
+            document.getElementById("btnLimpar").addEventListener("click", () => sessionStorage.clear());
         }
 
         window.addEventListener("load", inicia);
@@ -28,6 +30,7 @@
     <input type="text" name="fnome" id="fnome" size="20" maxlength="20"><br><br>
     <button id="btnP2">Página 2</button>
     <button id="btnP3">Página 3</button>
+    <button id="btnLimpar">Limpar SessionStorage</button>
 </body>
 
 </html>
