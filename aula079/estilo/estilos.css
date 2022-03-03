@@ -8,6 +8,7 @@ body {
 	width: 40px;
 	height: 40px;
 	background-image: url("/aula079/imagens/nave_jog.gif");
+	position: absolute;
 }
 
 .telaMsg {
@@ -18,4 +19,25 @@ body {
 	width: 720px;
 	height: 621px;
 	display: none;
+}
+
+#medidorPlaneta {
+	border: 2px solid #000;
+	width: 300px;
+	height: 20px;
+	background-color: #f00;
+}
+
+#barraPlaneta {
+	width: 300px;
+	height: 20px;
+	background-color: #0f0;
+}
+
+.tiroJog {
+	width: 6px;
+	height: 6px;
+	background-color: #000;
+	border-radius: 6px;
+	position: absolute;
 }
