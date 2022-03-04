@@ -48,3 +48,15 @@ body {
 	background-image: url("/aula079/imagens/bomba.gif");
 	position: absolute;
 }
+
+.explosaoAr {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+}
+
+.explosaoChao {
+	width: 55px;
+	height: 57px;
+	position: absolute;
+}
