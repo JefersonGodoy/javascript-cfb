@@ -123,8 +123,8 @@ function colisaoTiroBomba(tiro) {
 }
 
 function criaExplosao(tipo, x, y) {//tipo 1 AR----Tipo 2 Chao
-	if (document.getElementById("explsao" + (ie - 3))) {
-		document.getElementById("explsao" + (ie - 3)).remove();
+	if (document.getElementById("explosao" + (ie - 3))) {
+		document.getElementById("explosao" + (ie - 3)).remove();
 	}
 	var explosao = document.createElement("div");
 	var img = document.createElement("img");
