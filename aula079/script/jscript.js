@@ -143,11 +143,11 @@ function criaExplosao(tipo, x, y) {//tipo 1 AR----Tipo 2 Chao
 
 	if (tipo == 1) {
 		att1.value = "explosaoAr";
-		att2.value = "top: " + y + "px;left:" + x + "px";
+		att2.value = "top: " + y + "px;left:" + x + "px;";
 		att4.value = "/aula079/imagens/explosao_ar.gif?" + new Date();
 	} else {
 		att1.value = "explosaoChao";
-		att2.value = "top: " + (tamTelaH - 57) + "px;left:" + (x - 17) + "px";
+		att2.value = "top: " + (tamTelaH - 57) + "px;left:" + (x - 17) + "px;";
 		att4.value = "/aula079/imagens/explosao_chao.gif?" + new Date();
 	}
 	att5.value = "/aula079/sons/exp1.mp3?" + new Date();
@@ -210,8 +210,7 @@ function inicia() {
 	vidaPlaneta = 300;
 
 	//controles de explosao
-	ie = 0;
-	isom = 0;
+	ie = isom = 0;
 
 	gameLoop();
 
