@@ -60,3 +60,13 @@ body {
 	height: 57px;
 	position: absolute;
 }
+
+.telaMsg {
+	position: absolute;
+	margin-left: -25%;
+	top: 10px;
+	left: 50%;
+	width: 720px;
+	height: 621px;
+	display: none;
+}
