@@ -168,10 +168,26 @@ function criaExplosao(tipo, x, y) {//tipo 1 AR----Tipo 2 Chao
 }
 
 function controlaJogador() {
+
 	pjy += diryJ * velJ;
 	pjx += dirxJ * velJ;
 	jog.style.top = pjy + "px";
 	jog.style.left = pjx + "px";
+
+	if (pjx < 0) {
+		pjx = 0;
+	}
+	if (pjx > tamTelaW - 40) {
+		pjx = tamTelaW - 40;
+	}
+
+	if (pjy < 200) {
+		pjy = 200;
+	}
+	if (pjy > tamTelaH - 40) {
+		pjy = tamTelaH - 40;
+	}
+
 }
 
 function gerenciaGame() {
