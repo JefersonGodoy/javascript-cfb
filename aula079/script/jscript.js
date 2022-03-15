@@ -151,7 +151,7 @@ function criaExplosao(tipo, x, y) {//tipo 1 AR----Tipo 2 Chao
 		att2.value = "top: " + (tamTelaH - 57) + "px;left:" + (x - 17) + "px;";
 		att4.value = "/aula079/imagens/explosao_chao.gif?" + new Date();
 	}
-	att5.value = "/aula079/sons/exp1.mp3?" + new Date();
+	att5.value = "//aula079/sons/exp1.mp3?" + new Date();
 	att6.value = "som" + isom;
 	explosao.setAttributeNode(att1);
 	explosao.setAttributeNode(att2);
@@ -201,7 +201,14 @@ function gameLoop() {
 	frames.requestAnimationFrame(gameLoop);
 }
 
-function inicia() {
+function reinicia() {
+	bombasTotal = document.getElementsByClassName("bomba");
+	var tam = bombasTotal.length;
+	for (var i = 0; i < tam; i++) {
+		if (bombasTotal[i]) {
+			bombasTota[i].remove();
+		}
+	}
 	telaMsg.style.display = "none";
 	clearInterval(tmpCriaBomba);
 	cancelAnimationFrame(frames);
