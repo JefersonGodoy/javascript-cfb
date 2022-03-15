@@ -202,7 +202,23 @@ function gameLoop() {
 }
 
 function inicia() {
+	telaMsg.style.display = "none";
+	clearInterval(tmpCriaBomba);
+	cancelAnimationFrame(frames);
+	vidaPlaneta = 300;
+	pjy = tamTelaH / 2;
+	pjx = tamTelaW / 2;
+	jog.style.top = pjy + "px";
+	jog.style.left = pjx + "px";
+	contBombas = 150;
 	jogo = true;
+	tmpCriaBomba = setInterval(criaBomba, 1700);
+	gameLoop();
+
+}
+
+function inicia() {
+	jogo = false;
 
 	//ini tela
 	tamTelaH = window.innerHeight;
@@ -218,11 +234,8 @@ function inicia() {
 	jog.style.left = pjx + "px";
 
 	//controles das bombas
-	clearInterval(tmpCriaBomba);
 	contBombas = 150;
 	velB = 3;
-	tmpCriaBomba = setInterval(criaBomba, 1700);
-
 
 	//controles do planeta
 	vidaPlaneta = 300;
@@ -234,8 +247,9 @@ function inicia() {
 
 	//telas
 	telaMsg = document.getElementById("telaMsg");
-
-	gameLoop();
+	telaMsg.style.backgroundImage = "url('/aula079/imagens/intro.jpg')";
+	telaMsg.style.display = "block";
+	document.getElementById("btnJogar").addEventListener("click", reinicia);
 
 }
 
