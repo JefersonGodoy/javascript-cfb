@@ -216,6 +216,7 @@ function gameLoop() {
 	}
 	gerenciaGame();
 	frames.requestAnimationFrame(gameLoop);
+	console.log(frames);
 }
 
 function reinicia() {
@@ -275,8 +276,8 @@ function inicia() {
 	telaMsg.style.display = "block";
 	document.getElementById("btnJogar").addEventListener("click", reinicia);
 
-
 }
+
 
 window.addEventListener("load", inicia);
 document.addEventListener("keydown", event => teclaDw(event));
