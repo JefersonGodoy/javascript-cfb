@@ -1,7 +1,8 @@
 body {
 	overflow-x: hidden;
 	overflow-y: hidden;
-	background-color: #fff;
+	background-color: #000;
+	/*background-image: url(/aula079/imagens/fundo.jpg);*/
 }
 
 .navJog {
@@ -37,7 +38,7 @@ body {
 .tiroJog {
 	width: 6px;
 	height: 6px;
-	background-color: #000;
+	background-color: rgb(245, 104, 23);
 	border-radius: 6px;
 	position: absolute;
 }
