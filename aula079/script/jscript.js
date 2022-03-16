@@ -216,7 +216,6 @@ function gameLoop() {
 	}
 	gerenciaGame();
 	frames.requestAnimationFrame(gameLoop);
-	console.log(frames);
 }
 
 function reinicia() {
@@ -244,7 +243,7 @@ function reinicia() {
 
 function inicia() {
 	jogo = false;
-
+	clearInterval(tmpCriaBomba);
 	//ini tela
 	tamTelaH = window.innerHeight;
 	tamTelaW = window.innerWidth;
