@@ -8,18 +8,17 @@
     <title>Document</title>
     <script>
 
-        var dvcx, frames;
+        function ativo() {
+            var cx = document.getElementById("textoSelecionado");
+            var elemento = document.activeElement;
+            var selecao = elemento.value.substring(elemento.selectionStart, elemento.selectionEnd);
+            cx.innerHTML = selecao;
 
-        function loop() {
-
-            dvcx.innerHTML = document.activeElement.tagName;
-            frames = requestAnimationFrame(loop);
         }
 
         function inicia() {
-
-            dvcx = document.getElementById("cx");
-            loop();
+            var texto = document.getElementById("textoOriginal");
+            texto.addEventListener("mouseup", ativo);
         }
 
         window.addEventListener("load", inicia);
@@ -29,11 +28,9 @@
 
 <body>
 
-    <div id="cx"></div>
-    <input type="text" name="txt">
-    <button>Teste</button>
-    <p>CFB Cursos - Curso de JavaScript</p>
-    <img src="logo.jpg">
+    <textarea id="textoOriginal" rows="5"
+        cols="20">CFB Cursos - Curso de JavaScript - Aula 88 - Atributo activeElement</textarea><br>
+    Texto Selecionado: <span id="textoSelecionado"></span>
 
 </body>
 
