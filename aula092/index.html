@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0px;
+        }
+
+        .carro {
+            width: 250px;
+            margin-bottom: 50px;
+        }
+
+        .menuItem {
+            height: 100%;
+            cursor: pointer;
+        }
+
+        #menu {
+            border: 3px solid #000;
+            border-radius: 10px;
+            width: 500px;
+            height: 100px;
+            background-color: #fff;
+        }
+    </style>
+
+    <script>
+
+        function sumir(obj) {
+            document.getElementById(obj).hidden = true;
+        }
+
+        function mostrar() {
+            for (var i = 1; i < 5; i++) {
+                document.getElementById("c" + i).hidden = true;
+            }
+            var obj = event.target.dataset.nome;
+            document.getElementById(obj).hidden = false;
+        }
+
+
+        function inicia() {
+            for (var i = 1; i < 5; i++) {
+                document.getElementById("c" + i).hidden = true;
+            }
+            document.getElementById("btnc1").addEventListener("click", mostrar);
+            document.getElementById("btnc2").addEventListener("click", mostrar);
+            document.getElementById("btnc3").addEventListener("click", mostrar);
+            document.getElementById("btnc4").addEventListener("click", mostrar);
+
+
+
+        }
+
+
+        window.addEventListener("load", inicia);
+
+    </script>
+</head>
+
+<body>
+
+    <div id="menu">
+        <img src="c1.png" data-nome="c1" id="btnc1" class="menuItem">
+        <img src="c2.png" data-nome="c2" id="btnc2" class="menuItem">
+        <img src="c3.png" data-nome="c3" id="btnc3" class="menuItem">
+        <img src="c4.png" data-nome="c4" id="btnc4" class="menuItem">
+    </div>
+    <img src="c1.png" id="c1" class="carro">
+    <img src="c2.png" id="c2" class="carro">
+    <img src="c3.png" id="c3" class="carro">
+    <img src="c4.png" id="c4" class="carro">
+
+</body>
+
+</html>
